@@ -384,6 +384,140 @@ footer p {
 }
 
 /* ============================================
+   RESET PASSWORD PAGE STYLES
+   ============================================ */
+
+.reset-card {
+    max-width: 480px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.reset-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.reset-header {
+    margin-bottom: var(--spacing-xl) !important;
+}
+
+.reset-header .section-description {
+    margin-bottom: var(--spacing-lg) !important;
+}
+
+/* PASSWORD INPUT WRAPPER */
+.password-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input-wrapper .password-input {
+    padding-right: 44px;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: var(--spacing-md);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: var(--spacing-sm);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-gray);
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+}
+
+.toggle-password:hover {
+    background-color: rgba(37, 99, 235, 0.08);
+    color: var(--primary-color);
+}
+
+.toggle-password:active {
+    transform: scale(0.95);
+}
+
+/* PASSWORD HINT TEXT */
+.password-hint {
+    display: block;
+    margin-top: var(--spacing-sm);
+    color: var(--text-gray);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ERROR MESSAGE STYLING */
+.error-message {
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+    border-left: 4px solid #dc2626;
+    color: #991b1b;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-lg);
+    font-size: 14px;
+    line-height: 1.6;
+    animation: slideDown 0.3s ease;
+}
+
+.error-message strong {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+/* SUCCESS MESSAGE STYLING */
+.success-message {
+    background-color: #dcfce7;
+    border: 1px solid #86efac;
+    border-left: 4px solid #22c55e;
+    color: #166534;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-top: var(--spacing-lg);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    animation: slideDown 0.3s ease;
+}
+
+/* RESET BUTTON OVERRIDE */
+.btn-reset {
+    margin-top: var(--spacing-md);
+}
+
+.btn-reset:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-reset:disabled:hover {
+    background-color: #d1d5db;
+    transform: none;
+    box-shadow: none;
+}
+
+/* FORM ANIMATIONS */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
    RESPONSIVE DESIGN
    ============================================ */
 
@@ -474,6 +608,27 @@ footer p {
     .btn {
         padding: var(--spacing-md) var(--spacing-sm);
         font-size: 15px;
+    }
+
+    .reset-card {
+        max-width: 100% !important;
+        padding: var(--spacing-lg) !important;
+    }
+
+    .password-input-wrapper .password-input {
+        padding-right: 40px;
+    }
+
+    .toggle-password {
+        right: 8px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .error-message,
+    .success-message {
+        font-size: 13px;
+        padding: var(--spacing-md) var(--spacing-sm);
     }
 }
 
